@@ -1,0 +1,69 @@
+{
+  "info" : 
+  {
+    "name" : "qooxdoo framework",
+
+    "summary" : "The qooxdoo framework library",
+    "description" : "This library contains the qooxdoo Javascript framework classes, including widgets, DOM/BOM abstraction classes, and I/O (Ajax) classes.",
+    
+    "keywords" : ["qooxdoo", "framework", "widget", "cross-browser", "ajax"],
+    "homepage" : "http://qooxdoo.org/about/framework",
+
+    "license" : "LGPL/EPL",
+    "authors" : 
+    [
+      {
+        "name" : "Alexander Steitz (aback)",
+        "email" : "alexander.steitz@1und1.de"
+      },
+      {
+        "name" : "Martin Wittemann (martinwittemann)",
+        "email" : "martin.wittemann@1und1.de"
+      },
+      {
+        "name" : "Andreas Ecker (ecker)",
+        "email" : "ecker@users.sourceforge.net"
+      }
+    ],
+
+    "version"         : "1.2.1",
+    "qooxdoo-versions": ["1.2.1"]
+  },
+  
+  "provides" : 
+  {
+    "namespace"   : "qx",
+    "encoding"    : "utf-8",
+    "class"       : "source/class",
+    "resource"    : "source/resource",
+    "translation" : "source/translation",
+    "type"        : "library"
+  },
+  
+  "setup" :
+  {
+    "qx.debug" : 
+    {
+      "values" : [ "on", "off" ],
+      "default" : "on"  
+    },
+    
+    "qx.aspects" : 
+    {
+      "values" : [ "on", "off" ],
+      "default" : "off"  
+    },
+    
+    "qx.dynlocale" : 
+    {
+      "values" : [ "on", "off" ],
+      "default" : "off"  
+    },
+    
+    "qx.theme" :
+    {
+      "default" : "qx.theme.Modern"
+    }
+  }
+}
+
