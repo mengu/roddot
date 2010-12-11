@@ -2,6 +2,10 @@ require 'net/http'
 require 'uri'
 
 class FeedsController < ApplicationController
+
+  def index
+    redirect_to "/qxroddot/source/index.html"
+  end
   
   def show
     @feed = Net::HTTP.get(URI.parse("http://www.reddit.com/r/"+params[:id]+"/.json"))
