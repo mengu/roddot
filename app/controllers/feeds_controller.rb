@@ -6,7 +6,6 @@ class FeedsController < ApplicationController
   def show
     @feed = Net::HTTP.get(URI.parse("http://www.reddit.com/r/"+params[:id]+"/.json"))
     @reddit_feed = ActiveSupport::JSON.decode(@feed)
-    puts @reddit_feed["data"]["children"][0].inspect
     @titles = []
     for @sub_feed in @reddit_feed["data"]["children"]
       @title = '<div style="margin-bottom: 1px;"><a href="http://reddit.com'+@sub_feed["data"]["permalink"]+'" style="color: #000; text-decoration:none;" target="_blank">'+@sub_feed["data"]["title"]+'</a>'
