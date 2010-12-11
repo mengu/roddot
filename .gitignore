@@ -2,6 +2,5 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
-*.pyc
-qooxdoo-1.2.1/tool/*.pyc
+public/**/*.pyc
 *.swp
