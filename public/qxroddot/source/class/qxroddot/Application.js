@@ -98,8 +98,9 @@ qx.Class.define("qxroddot.Application",
             var clojureReddit = new qx.ui.tree.TreeFolder("Clojure");
             var javaReddit = new qx.ui.tree.TreeFolder("Java");
             var lispReddit = new qx.ui.tree.TreeFolder("Lisp");
+            var wtfReddit = new qx.ui.tree.TreeFolder("WTF");
             reddits.add(programmingReddit, pythonReddit, djangoReddit, rubyReddit,
-                railsReddit, scalaReddit, clojureReddit, javaReddit, lispReddit);
+                railsReddit, scalaReddit, clojureReddit, javaReddit, lispReddit, wtfReddit);
             reddits.setOpen(true);
             redditTree.setRoot(reddits);
             redditTree.setHideRoot(true);
