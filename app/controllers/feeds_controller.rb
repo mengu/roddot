@@ -8,7 +8,7 @@ class FeedsController < ApplicationController
   end
   
   def show
-    @feed = Net::HTTP.get(URI.parse("http://www.reddit.com/r/"+params[:id]+"/.json"))
+    @feed = Net::HTTP.get(URI.parse("http://www.reddit.com/r/"+params[:id]+"/.json?limit=100"))
     @reddit_feed = ActiveSupport::JSON.decode(@feed)
     @titles = []
     for @sub_feed in @reddit_feed["data"]["children"]
