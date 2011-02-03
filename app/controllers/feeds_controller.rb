@@ -4,7 +4,7 @@ require 'uri'
 class FeedsController < ApplicationController
 
   def index
-    redirect_to "/qxroddot/source/index.html"
+    redirect_to "/qxroddot/build/index.html"
   end
 
   def show
