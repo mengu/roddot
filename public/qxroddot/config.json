@@ -38,12 +38,11 @@
     "LOCALES"      : [ "en" ],
     "CACHE"        : "${TMPDIR}/cache",
     "ROOT"         : "."
-  }
+  },
 
   // You only need to edit the remainder of this file, if you want to customize
   // specific jobs, or add own job definitions.
 
-  /*
   "jobs" :
   {
     // Uncomment the following entry to add a contrib or library to your
@@ -54,8 +53,15 @@
     {
       "library" :
       [
+        // for your qooxdoo app
         {
-          "manifest" : "contrib://SkeletonApplication/trunk/Manifest.json"
+          "manifest" : "/home/mengu/projects/rails/roddot/public/qxroddot/Manifest.json",
+          "uri"      : "/qxroddot"
+        },
+        // for qooxdoo sdk.
+        {
+          "manifest" : "${QOOXDOO_PATH}/framework/Manifest.json",
+          "uri"      : "/qooxdoo-1.2.1/framework"
         }
       ]
     },
@@ -70,9 +76,12 @@
         "code" :
         {
           "format" : false
+        },
+        "uris" :
+        {
+          "resource" : "/qxroddot/build/resource"
         }
       }
     }
   }
-  */
 }
