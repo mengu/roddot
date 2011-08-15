@@ -1,0 +1,8 @@
+<% for sub_feed in @reddit_feed["data"]["children"] %>
+<div style="margin-bottom: 1px;"><a href="http://reddit.com<%= sub_feed["data"]["permalink"] %>" style="color: #000; text-decoration:none;" target="_blank"><%= sub_feed["data"]["title"] %></a>
+<% url = sub_feed["data"]["url"] %>
+  <% if !url.include?("r/"+params[:id]) %>
+  [<a href="<%= sub_feed["data"]["url"] %>" target="_blank">+</a>]
+  <% end %>
+</div>
+<% end %>
