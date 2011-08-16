@@ -10,13 +10,9 @@ class FeedsController < ApplicationController
   def show
     @feed = Net::HTTP.get(URI.parse("http://www.reddit.com/r/"+params[:id]+"/.json?limit=100"))
     @reddit_feed = ActiveSupport::JSON.decode(@feed)
-    @titles = []
-
-    
     respond_to do |format|
       format.html
     end
-
   end
 
 end
